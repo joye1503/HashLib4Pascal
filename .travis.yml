@@ -7,8 +7,6 @@ dist: bionic
 
 os:
   - linux
-  - osx
-  - windows
 
 env:
   global:
@@ -22,11 +20,15 @@ env:
 matrix:
   include:
     - os: linux
-      env: LAZ_VER=1.6  LAZ_ENV=qemu-arm LAZ_OPT="--os=linux --cpu=arm"
-    - os: linux
-      env: LAZ_VER=2.0.4 LAZ_ENV=qemu-arm LAZ_OPT="--os=linux --cpu=arm"
+      arch: amd64
+      env: LAZ_PKG=true
     - os: linux
       arch: arm64
+      env: LAZ_PKG=true
+    - os: linux
+      arch: arm64-graviton2
+      virt: lxd
+      group: edge
       env: LAZ_PKG=true
     # - os: windows
     #   env: LAZ_VER=1.6 LAZ_REL=64 LAZ_OPT="--os=win64 --cpu=x86_64"
