@@ -3,7 +3,7 @@
 
 language: shell
 sudo: required
-dist: focal
+dist: bionic
 
 os:
   - linux
