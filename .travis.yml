@@ -3,7 +3,7 @@
 
 language: shell
 sudo: required
-dist: bionic
+dist: xenial
 
 os:
   - linux
