@@ -47,7 +47,7 @@ matrix:
 #   - chmod +x .travis.install.py 
 
 before_install:
-  - sudo apt-get -y install lazarus-src-2.0
+  - sudo apt-get install lazarus-src-2.0
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install python3 --params "/InstallDir:C:\python3"; fi
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then export PATH=/c/Python3:/c/Python3/Scripts:/c/lazarus:$PATH; fi
   - if [[ "$TRAVIS_OS_NAME" != "windows" ]]; then
